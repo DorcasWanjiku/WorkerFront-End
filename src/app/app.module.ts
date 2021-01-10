@@ -8,6 +8,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserSigninComponent } from './user-signin/user-signin.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { EasyapplyComponent } from './easyapply/easyapply.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApplicationService } from './application.service';
+// import { Admin } from './admin.service/admin.service.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,14 @@ import { EasyapplyComponent } from './easyapply/easyapply.component';
     UserSigninComponent,
     UserSignupComponent,
     EasyapplyComponent
+    // Admin.ServiceComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApplicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

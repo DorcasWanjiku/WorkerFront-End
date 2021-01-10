@@ -25,7 +25,7 @@ export class ApplicationService {
         let searchPoint = "https://findjobo254.herokuapp.com/applications"
 
         console.log("Should populate applications available")
-        let promise = new Promise<void>((resolve, reject) => {
+        let promise = new Promise((resolve, reject) => {
             this.http.get<ApiResponse>(searchPoint).toPromise().then(
                 (results) => {
                     console.log("This is a job application")
