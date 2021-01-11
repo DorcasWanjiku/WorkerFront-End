@@ -7,9 +7,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserSigninComponent } from './user-signin/user-signin.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
-import { EasyapplyComponent } from './easyapply/easyapply.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ApplicationService } from './application.service';
 // import { Admin } from './admin.service/admin.service.component';
 
 @NgModule({
@@ -18,8 +16,7 @@ import { ApplicationService } from './application.service';
     NavBarComponent,
     LandingPageComponent,
     UserSigninComponent,
-    UserSignupComponent,
-    EasyapplyComponent
+    UserSignupComponent
     // Admin.ServiceComponent
   ],
   imports: [
@@ -27,7 +24,6 @@ import { ApplicationService } from './application.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ApplicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
